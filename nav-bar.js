@@ -6,10 +6,10 @@
 let navBar = /* html */ `
 	<div>
 		<ul class="nav-list">
-			<li class="nav-list-elem"><a href="/index.html">Forside</a></li>
-			<li class="nav-list-elem"><a href="/tjenester.html">Ulike kjøretøy</a></li>
-			<li class="nav-list-elem"><a href="/medlemskap.html">Medlemskap</a></li>
-			<li class="nav-list-elem"><a href="/steder.html">Våre lokasjoner</a></li>
+			<li class="nav-list-elem"><a href="./index.html">Forside</a></li>
+			<li class="nav-list-elem"><a href="./tjenester.html">Ulike kjøretøy</a></li>
+			<li class="nav-list-elem"><a href="./medlemskap.html">Medlemskap</a></li>
+			<li class="nav-list-elem"><a href="./steder.html">Våre lokasjoner</a></li>
 		</ul>
 	</div>
 `;
