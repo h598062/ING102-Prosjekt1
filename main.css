@@ -58,6 +58,8 @@ body {
 .tjeneste-liste > li > a > h4 {
 	background-color: inherit;
 	text-align: center;
+	padding: 1em;
+	margin: 0;
 }
 
 .tjeneste-innhold {
