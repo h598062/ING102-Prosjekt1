@@ -1,15 +1,69 @@
-* {
+body {
 	background-color: rgb(145, 145, 145);
 	font-family: Verdana;
 }
 
+#beskrivelse {
+	width: 50%;
+	float: left;
+}
+
+#liste {
+	width: 50%;
+	float: left;
+}
+
+.tjeneste-liste {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tjeneste-liste > li {
+	width: 30%;
+	float: left;
+	padding: auto;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	outline: 0.1em solid black;
+	background-color: #444;
+}
+.tjeneste-liste > li > a {
+	color: #008000;
+	text-decoration: none;
+}
+.tjeneste-liste > li > a:hover {
+	background-color: #222;
+}
+
+.tjeneste-liste > li > a > h4 {
+	background-color: inherit;
+	display: block;
+	text-align: center;
+	padding: 0.1em;
+	margin: 0.1em;
+}
+
+#tjeneste-display {
+	float: right;
+	width: 50%;
+}
+
+.visningsrute {
+	background-color: rgb(41, 90, 74);
+	margin-top: 1em;
+	padding: 1em;
+}
+
 /* Header start */
 #banner {
-	border: 5px solid #008000;
+	border: 0.5em solid #008000;
 	text-align: center;
 }
 #banner > h1 {
-	font-size: 80px;
+	font-size: 6em;
 	padding: 0;
 	margin: 0;
 }
@@ -17,7 +71,7 @@
 #banner > p {
 	padding: 0;
 	margin: 0;
-	padding-bottom: 10px;
+	padding-bottom: 1em;
 }
 /* Header slutt */
 
@@ -48,16 +102,16 @@
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 20px 24px;
+	padding: 1em 1.2em;
 	text-decoration: none;
 	background-color: inherit;
-	border: 5px solid #333;
+	border: 0.3em solid #333;
 }
 
 /* Gjør link svart når du holder over*/
 .nav-list > li > a:hover {
 	background-color: #222;
-	border: 5px solid #008000;
+	border: 0.3em solid #008000;
 }
 /* forsøke å lage en grønn farge på den siden en er på */
 .nav-list > li > .active {

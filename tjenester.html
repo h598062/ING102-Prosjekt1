@@ -37,24 +37,58 @@
 			<section id="liste">
 				<div>
 					<h3>Våre kjøretøy</h3>
-					<ul>
+					<ul class="tjeneste-liste">
 						<li>
-							<a href="./hydrolift.html">
-								<h4>Hydrolift E-22</h4>
-							</a>
-							<!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
-						</li>
-						<li>
-							<a href="./xpeng.html">
+							<a
+								href="#bil"
+								onclick="document.querySelectorAll('.visningsrute div').forEach((e) => {
+								e.style = 'display: none';
+							});
+							document.getElementById('bil').style = 'display: block';"
+							>
 								<h4>XPENG P7</h4>
 							</a>
 						</li>
 						<li>
-							<a href="./momas.html">
+							<a
+								href="#båt"
+								onclick="document.querySelectorAll('.visningsrute div').forEach((e) => {
+								e.style = 'display: none';
+							});
+							document.getElementById('båt').style = 'display: block';"
+							>
+								<h4>Hydrolift E-22</h4>
+							</a>
+						</li>
+						<li>
+							<a
+								href="#sykkel"
+								onclick="document.querySelectorAll('.visningsrute div').forEach((e) => {
+								e.style = 'display: none';
+							});
+							document.getElementById('sykkel').style = 'display: block';"
+							>
 								<h4>Momas Jason 2022</h4>
 							</a>
 						</li>
 					</ul>
+				</div>
+			</section>
+			<section id="tjeneste-display">
+				<div class="visningsrute">
+					<div id="bil" style="display: block">
+						<h3>XPENG P7</h3>
+						<p>bestestest bil</p>
+					</div>
+					<div id="båt" style="display: none">
+						<h3>Hydrolift E-22</h3>
+						<p>car go brrrrrrr</p>
+						<!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
+					</div>
+					<div id="sykkel" style="display: none">
+						<h3>Momas Jason 2022</h3>
+						<p>dette e egentlig et fly</p>
+					</div>
 				</div>
 			</section>
 		</div>
