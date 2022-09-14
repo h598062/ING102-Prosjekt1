@@ -4,7 +4,10 @@
 
 // Footer html kode, felles for alle html filer
 let appFooter = /* html */ `
-	
+	<div id="footer">
+		<h4>Laget av</h4>
+		<p>Bjørnar, Storm, Halvor, Tarek</p>
+	</div>
 `;
 // plasser html kode fra appFooter variabel inn i et element med id "app-footer"
 document.getElementById("app-footer").innerHTML = appFooter;

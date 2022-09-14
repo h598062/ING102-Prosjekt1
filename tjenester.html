@@ -37,48 +37,44 @@
 					</p>
 				</div>
 			</section>
-			<section id="liste">
-				<div>
-					<h3>Våre kjøretøy</h3>
-					<ul class="tjeneste-liste">
-						<li>
-							<a
-								href="#bil"
-								onclick="document.querySelectorAll('.visningsrute div').forEach((e) => {
+			<section class="visningsrute">
+				<h3>Våre kjøretøy</h3>
+				<ul class="tjeneste-liste">
+					<li>
+						<a
+							href="#bil"
+							onclick="document.querySelectorAll('.tjeneste-innhold div').forEach((e) => {
 								e.style = 'display: none';
 							});
 							document.getElementById('bil').style = 'display: block';"
-							>
-								<h4>XPENG P7</h4>
-							</a>
-						</li>
-						<li>
-							<a
-								href="#båt"
-								onclick="document.querySelectorAll('.visningsrute div').forEach((e) => {
+						>
+							<h4>XPENG P7</h4>
+						</a>
+					</li>
+					<li>
+						<a
+							href="#båt"
+							onclick="document.querySelectorAll('.tjeneste-innhold div').forEach((e) => {
 								e.style = 'display: none';
 							});
 							document.getElementById('båt').style = 'display: block';"
-							>
-								<h4>Hydrolift E-22</h4>
-							</a>
-						</li>
-						<li>
-							<a
-								href="#sykkel"
-								onclick="document.querySelectorAll('.visningsrute div').forEach((e) => {
+						>
+							<h4>Hydrolift E-22</h4>
+						</a>
+					</li>
+					<li>
+						<a
+							href="#sykkel"
+							onclick="document.querySelectorAll('.tjeneste-innhold div').forEach((e) => {
 								e.style = 'display: none';
 							});
 							document.getElementById('sykkel').style = 'display: block';"
-							>
-								<h4>Momas Jason 2022</h4>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section id="tjeneste-display">
-				<div class="visningsrute">
+						>
+							<h4>Momas Jason 2022</h4>
+						</a>
+					</li>
+				</ul>
+				<div class="tjeneste-innhold">
 					<div id="bil" style="display: block">
 						<h3>XPENG P7</h3>
 						<p>bestestest bil</p>
