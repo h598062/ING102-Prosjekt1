@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		"formulahendry.auto-complete-tag",
+		"tobermory.es6-string-html",
+		"eamodio.gitlens",
+		"ecmel.vscode-html-css",
+		"ritwickdey.liveserver",
+		"christian-kohler.path-intellisense"
+	]
+}

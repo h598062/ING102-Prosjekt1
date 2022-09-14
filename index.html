@@ -8,17 +8,25 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
 	</head>
 	<body>
-		<div class="banner">
-			<h1>EDEL</h1>
-			<p>For deling av elektriske kjøretøy</p>
+		<div id="page-header">
+			<!-- bruker en js script fil til å laste inn header og footer 
+				slik at vi slipper å ender alle filer hver gang vi fikser på de -->
+			<!-- page header, rediger header.js for å legge inn html kode her -->
+			<script defer src="/header.js"></script>
+			<header id="app-header"></header>
 		</div>
-		<div>
-			<h3>Sider</h3>
-			<ol>
-				<li><a href="kjøretøy.html">Ulike kjøretøy</a></li>
-				<li><a href="medlemskap.html">Medlemskap</a></li>
-				<li><a href="steder.html">Våre lokasjoner</a></li>
-			</ol>
+		<div id="page-navBar">
+			<!-- page footer, rediger footer.js for å legge inn html kode her -->
+			<script defer src="/nav-bar.js"></script>
+			<nav id="nav-bar"></nav>
+		</div>
+		<div id="page-content">
+			<section></section>
+		</div>
+		<div id="page-footer">
+			<!-- page footer, rediger footer.js for å legge inn html kode her -->
+			<script defer src="/footer.js"></script>
+			<footer id="app-footer"></footer>
 		</div>
 	</body>
 </html>
