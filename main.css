@@ -1,53 +1,66 @@
+* {
+	background-color: rgb(145, 145, 145);
+	font-family: Verdana;
+}
+
+/* Header start */
 #banner {
 	border: 5px solid #008000;
 	text-align: center;
 }
-#beskrivelse {
+#banner > h1 {
+	font-size: 80px;
+	padding: 0;
+	margin: 0;
 }
 
-#liste {
+#banner > p {
+	padding: 0;
+	margin: 0;
+	padding-bottom: 10px;
 }
+/* Header slutt */
 
 /* Navbar css start */
 #nav-bar {
-	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	display: inline;
-	text-align: center;
 }
 
 .nav-list {
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	margin: inherit;
+	padding: inherit;
 	overflow: hidden;
 	background-color: #333;
-	position: -webkit-sticky; /* Safari */
 	position: sticky;
-	top: 0;
 	top: 0;
 	width: 100%;
 }
-
-.nav-list-elem {
+/* navliste element */
+.nav-list > li {
 	float: left;
+	background-color: inherit;
 }
-
-.nav-list-elem a {
+/* link i navliste */
+.nav-list > li > a {
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 20px 24px;
 	text-decoration: none;
+	background-color: inherit;
+	border: 5px solid #333;
 }
 
 /* Gjør link svart når du holder over*/
-.nav-list-elem a:hover {
-	background-color: #111;
+.nav-list > li > a:hover {
+	background-color: #222;
+	border: 5px solid #008000;
 }
 /* forsøke å lage en grønn farge på den siden en er på */
-.nav-list-elem .active {
-	background-color: #04aa6d;
+.nav-list > li > .active {
+	background-color: #008000;
 }
 /* Navbar css slutt */
