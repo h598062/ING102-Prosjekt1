@@ -3,28 +3,60 @@ body {
 	font-family: "Noto Sans", sans-serif;
 }
 
-#page-content {
+#page-content-wrapper {
 	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 auto;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.page-content {
+	display: flex;
+	flex: 0 1 auto;
 	justify-content: space-evenly;
+}
+
+.text-rute {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-wrap: wrap;
+}
+
+.text-title {
+	text-align: center;
+}
+
+.text-content {
 }
 
 /* liste i tjenester.html start */
 .visningsrute {
-	margin-top: 2em;
-	background-color: rgb(41, 90, 74);
+	/* margin-top: 2em;
 	width: 50%;
-	height: 50vh;
+	height: 50vh; */
+	min-width: 20em;
+
 	display: flex;
 	flex-direction: column;
+	flex-grow: 2;
+
+	background-color: rgb(41, 90, 74);
 	outline: 0.2em solid black;
 }
 
 .visningsrute > h3 {
-	background-color: rgb(128, 229, 179);
+	flex-grow: 1;
+
 	padding: 0em 1em;
 	margin: 0;
+
 	line-height: 2em;
 	text-align: center;
+
+	background-color: rgb(128, 229, 179);
 }
 
 .tjeneste-liste {
