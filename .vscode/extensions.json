@@ -6,6 +6,7 @@
 		"ecmel.vscode-html-css",
 		"ritwickdey.liveserver",
 		"christian-kohler.path-intellisense",
-		"esbenp.prettier-vscode"
+		"esbenp.prettier-vscode",
+		"GitHub.vscode-pull-request-github"
 	]
 }
