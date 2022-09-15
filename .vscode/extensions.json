@@ -7,6 +7,7 @@
 		"ritwickdey.liveserver",
 		"christian-kohler.path-intellisense",
 		"esbenp.prettier-vscode",
-		"GitHub.vscode-pull-request-github"
+		"github.vscode-pull-request-github",
+		"dzhavat.css-flexbox-cheatsheet"
 	]
 }
