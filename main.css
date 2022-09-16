@@ -1,77 +1,120 @@
+/*	sett font og bakgrunnsfarge til nettsiden */
 body {
 	background-color: rgb(145, 145, 145);
 	font-family: "Noto Sans", sans-serif;
+	margin: 1em;
+	padding: 0;
 }
 
+/*	wrapper for ALT content i body som ikke
+	kommer fra script import */
 #page-content-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	flex: 0 1 auto;
-	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: flex-start;
+	flex-direction: row;
+	justify-content: start;
+	align-items: stretch;
+	flex: 1 1 100px;
 }
 
+/*	standard class for alle hoved containere */
 .page-content {
-	display: flex;
-	flex: 0 1 auto;
-	justify-content: space-evenly;
+	margin: 1em;
+	padding: 1em;
 }
 
+/*	text container start */
 .text-rute {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 0;
 	flex-wrap: wrap;
 }
-
-.text-title {
+/*	spesiell formatering for 
+	hovedtittel i text container */
+.page-title {
+	padding-top: 0;
+	margin: 0;
 	text-align: center;
 }
-
+/* undertittel i text container */
+.text-title {
+}
 .text-content {
 }
+/*	text container stopp */
 
-/* liste i tjenester.html start */
+/*	visninsrute container start */
 .visningsrute {
-	/* margin-top: 2em;
-	width: 50%;
-	height: 50vh; */
-	min-width: 20em;
-
 	display: flex;
 	flex-direction: column;
+	align-items: stretch;
 	flex-grow: 2;
 
 	background-color: rgb(41, 90, 74);
-	outline: 0.2em solid black;
+	outline: 3px solid black;
+	padding: 0.3em;
 }
-
+/*	visningsrute tittel */
 .visningsrute > h3 {
 	flex-grow: 1;
 
-	padding: 0em 1em;
 	margin: 0;
+	margin-bottom: 0.1em;
 
 	line-height: 2em;
 	text-align: center;
 
 	background-color: rgb(128, 229, 179);
+	border: 2px solid black;
 }
+/*	visninsrute container slutt */
 
+/*	medlemskap tabell start */
+.medlemskap-tabell {
+	border-top: none;
+	border-collapse: collapse;
+}
+.medlemskap-tabell #tblpris,
+.medlemskap-tabell #tbltjenester {
+	padding-left: 1em;
+	text-align: left;
+}
+.medlemskap-tabell td,
+.medlemskap-tabell th {
+	border: 2px solid black;
+}
+.medlemskap-tabell th {
+	background-color: #333;
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
+.medlemskap-tabell td {
+	text-align: center;
+}
+.tblchkmark {
+	background-color: #222;
+	color: yellow;
+	min-width: 2em;
+	display: inline-block;
+}
+/*	medlemskap tabell slutt */
+
+/*	liste i tjenester.html start */
 .tjeneste-liste {
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
-	outline: 0.1em solid black;
+	border: 2px solid black;
 }
 
 .tjeneste-liste > li {
 	flex-grow: 1;
 	background-color: #444;
-	outline: 0.1em solid black;
+	outline: 1px solid black;
 }
 .tjeneste-liste > li > a {
 	color: #008000;
@@ -91,11 +134,13 @@ body {
 .tjeneste-innhold {
 	display: flex;
 	flex-direction: column;
+
+	margin: 1em;
+	margin-top: 0.2em;
 }
+/*	liste i tjenester.html slutt */
 
-/* liste i tjenester.html slutt */
-
-/* Header start */
+/*	Header start */
 #banner {
 	border: 0.5em solid #008000;
 	text-align: center;
@@ -111,36 +156,40 @@ body {
 	margin: 0;
 	padding-bottom: 1em;
 }
-/* Header slutt */
+/*	Header slutt */
 
-/* Footer start */
+/*	Footer start */
 #page-footer {
 }
-/* Footer slutt */
+/*	Footer slutt */
 
-/* Navbar css start */
+/*	Navbar css start */
 #nav-bar {
+	width: 100%;
 	margin: 0;
 	padding: 0;
-	display: inline;
 }
 
 .nav-list {
 	list-style-type: none;
-	margin: inherit;
-	padding: inherit;
 	overflow: hidden;
+
 	background-color: #333;
+
 	position: sticky;
 	top: 0;
-	width: 100%;
+	padding: 0;
+
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: row;
+	justify-content: flex-start;
 }
-/* navliste element */
+/*	navliste element */
 .nav-list > li {
-	float: left;
 	background-color: inherit;
 }
-/* link i navliste */
+/*	link i navliste */
 .nav-list > li > a {
 	display: block;
 	color: white;
@@ -151,13 +200,13 @@ body {
 	border: 0.3em solid #333;
 }
 
-/* Gjør link svart når du holder over*/
+/*	Gjør link svart når du holder over*/
 .nav-list > li > a:hover {
 	background-color: #222;
 	border: 0.3em solid #008000;
 }
-/* forsøke å lage en grønn farge på den siden en er på */
+/*	forsøke å lage en grønn farge på den siden en er på */
 .nav-list > li > .active {
 	background-color: #008000;
 }
-/* Navbar css slutt */
+/*	Navbar css slutt */
