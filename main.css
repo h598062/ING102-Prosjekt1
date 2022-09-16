@@ -19,7 +19,7 @@ body {
 
 /*	standard class for alle hoved containere */
 .page-content {
-	margin: 1em;
+	margin: 0em;
 	padding: 1em;
 }
 
@@ -52,7 +52,7 @@ body {
 	flex-grow: 2;
 
 	background-color: rgb(41, 90, 74);
-	outline: 3px solid black;
+	border: 3px solid black;
 	padding: 0.3em;
 }
 /*	visningsrute tittel */
