@@ -19,7 +19,8 @@ let elements = document.querySelectorAll("a");
 for (const x of elements) {
 	//let page = x.href.match(/\/\w+\.html/);
 	//console.log(page[0]);
-	if (x.href == document.URL) {
+	// hvis link target er lik nåværende url eller om link target er lik nåværende url uten #text
+	if (x.href == document.URL || x.href == document.URL.split("#")[0]) {
 		//console.log(x.className);
 		x.className = x.className + "active";
 	}

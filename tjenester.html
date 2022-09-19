@@ -45,7 +45,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#båt" onclick="tjeneste_onclick('båt');">
+						<a href="#boat" onclick="tjeneste_onclick('boat');">
 							<h4>Hydrolift E-22</h4>
 						</a>
 					</li>
@@ -55,21 +55,95 @@
 						</a>
 					</li>
 				</ul>
-				<div class="tjeneste-innhold">
-					<div id="bil" style="display: block">
+				<div id="bil" class="tjeneste-innhold hidden">
+					<div>
 						<h3>XPENG P7</h3>
-						<p>bestestest bil</p>
+						<p>
+							Bilen XPENG P7 er en elektrisk bil i toppklasse. Med en rekekvidde på 706 kilometer og en
+							akselerasjon fra 0-100 km/h på 4.5 sekunder kommer du ikke til å bli skuffet.
+						</p>
+						<p>
+							Hvis du vil lese mer om bilen, kan du følge denne linken til produsenten
+							<a href="https://heyxpeng.com/p7?prentId=1">XPENG P7</a>
+						</p>
 					</div>
-					<div id="båt" style="display: none">
-						<h3>Hydrolift E-22</h3>
-						<p>car go brrrrrrr</p>
-						<!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
-					</div>
-					<div id="sykkel" style="display: none">
-						<h3>Momas Jason 2022</h3>
-						<p>dette e egentlig et fly</p>
-					</div>
+					<img
+						src="https://xp-ams.s3.eu-central-1.amazonaws.com/www/public/static/img/p7-p4-1@2x.e28de669.jpg"
+						alt="XPENG P7 Vinter"
+					/>
 				</div>
+				<div id="boat" class="tjeneste-innhold hidden">
+					<div>
+						<h3>Hydrolift E-22</h3>
+						<p>
+							Hydrolift E-22 er en elektrisk båt som er 6.68m lang og 2.3m bred. Med sin Evoy Breeze motor
+							pakke får den en minste kraft på 120 hestekrefter, som oftest vesentlig mer. Toppfarten på
+							40 knopp er heller ikke noe
+						</p>
+						<p>
+							Hvis du vil ha mer info om båten kan du følge denne linken til produsenten sin nettside
+							<a href="https://hydrolift.com/e-22/?lang=no">Hydrolift E22</a>
+						</p>
+					</div>
+					<img
+						src="https://ekergroup.com/content/uploads/sites/4/2021/04/Hydrolift_E22_web_1.jpg"
+						alt="Hydrolift E22"
+					/>
+					<!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
+				</div>
+				<div id="sykkel" class="tjeneste-innhold hidden">
+					<div>
+						<h3>Momas Jason 2022</h3>
+						<p>
+							Momas Jason 2022 modell er norges mest solgte elsykkel, med god grunn. Dette er en elektrisk
+							terrengsykkel som er designet for bruk på vei, terreng og sti. Den har hydrauliske
+							skivebremser og opptil 100km rekkevidde.
+						</p>
+						<p>
+							Hvis du vil ha mer info om sykkelen, følg denne linken til produsentens nettside
+							<a href="https://www.momas.no/modeller/jason/">Momas Jason 2022</a>
+						</p>
+					</div>
+					<img src="https://www.momas.no/wp-content/uploads/2022/02/jason.png" alt="Momas Jason 2022" />
+					<!-- https://www.e-wheels.no/elsykkel/momas-jason/ -->
+				</div>
+				<script>
+					// Script for å automatisk vise riktig kjøretøy ved link navigering
+					let tjregex = /\.html\#(\w+)/; // match en #text ref i url
+					let tjreglist = document.URL.match(tjregex);
+					if (tjreglist != null) {
+						//console.log(tjreglist[1]);
+						let tjdivs = document.getElementsByClassName("tjeneste-innhold hidden");
+						//console.log(tjdivs);
+						for (const x of tjdivs) {
+							//console.log(x.id);
+							let z = x.id.trim();
+							if (z == tjreglist[1]) {
+								// tjreglist[1] blir text bak # i tittel
+								//console.log("ding ding ding");
+								// console.log(x.className);
+								let strings = x.className.split(" ");
+								let outstr = "";
+								for (const str of strings) {
+									if (str !== "hidden") {
+										outstr += str;
+									}
+								}
+								x.className = outstr;
+							}
+						}
+					} else {
+						let e = document.getElementById("bil");
+						let strings = e.className.split(" ");
+						let outstr = "";
+						for (const str of strings) {
+							if (str !== "hidden") {
+								outstr += str;
+							}
+						}
+						e.className = outstr;
+					}
+				</script>
 			</section>
 		</div>
 		<div id="page-footer">
