@@ -40,7 +40,23 @@ body {
 /* undertittel i text container */
 .text-title {
 }
-.text-content {
+.steder-ting {
+	display: flex;
+	justify-content: space-between;
+}
+
+.steder-ting > div > div > img {
+	max-width: 600px;
+}
+
+#venstre {
+	display: flex;
+	flex-direction: column;
+}
+
+#høyre {
+	display: flex;
+	flex-direction: column;
 }
 /*	text container stopp */
 
