@@ -1,155 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>EDEL - Kjøretøy</title>
-		<link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet" />
-		<script type="text/javascript" src="./main.js"></script>
-	</head>
-	<body>
-		<div id="page-header">
-			<!-- bruker en js script fil til å laste inn header og footer 
-				slik at vi slipper å endre alle filer hver gang vi fikser på de -->
-			<!-- page header, rediger header.js for å legge inn html kode her -->
-			<script defer src="./header.js"></script>
-			<header id="app-header"></header>
-		</div>
-		<div id="page-navBar">
-			<!-- page footer, rediger footer.js for å legge inn html kode her -->
-			<script defer src="./nav-bar.js"></script>
-			<nav id="nav-bar"></nav>
-		</div>
-		<div id="page-content-wrapper">
-			<section class="page-content text-rute">
-				<!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
-				<h2 class="page-title">Kjøretøy</h2>
-				<div class="text-content">
-					<p>
-						Her hos EDEL tilbyr vi forskjellige typer kjøretøy for å dekke dine behov. <br />
-						Vi har elsykler, elbiler og elbåter. <br />
-						Sjekk ut displayboksen ved siden av for å lese mer om dem som funksjoner og utstyr de har.
-					</p>
-				</div>
-			</section>
-			<section class="page-content visningsrute">
-				<h3>Våre kjøretøy</h3>
-				<ul class="tjeneste-liste">
-					<li>
-						<a href="#bil" onclick="tjeneste_onclick('bil');">
-							<h4>XPENG P7</h4>
-						</a>
-					</li>
-					<li>
-						<a href="#boat" onclick="tjeneste_onclick('boat');">
-							<h4>Hydrolift E-22</h4>
-						</a>
-					</li>
-					<li>
-						<a href="#sykkel" onclick="tjeneste_onclick('sykkel');">
-							<h4>Momas Jason 2022</h4>
-						</a>
-					</li>
-				</ul>
-				<div id="bil" class="tjeneste-innhold hidden">
-					<div>
-						<h3>XPENG P7</h3>
-						<p>
-							Bilen XPENG P7 er en elektrisk bil i toppklasse. Med en rekekvidde på 706 kilometer og en
-							akselerasjon fra 0-100 km/h på 4.5 sekunder kommer du ikke til å bli skuffet.
-						</p>
-						<p>
-							Hvis du vil lese mer om bilen, kan du følge denne linken til produsenten
-							<a href="https://heyxpeng.com/p7?prentId=1">XPENG P7</a>
-						</p>
-					</div>
-					<img
-						src="https://xp-ams.s3.eu-central-1.amazonaws.com/www/public/static/img/p7-p4-1@2x.e28de669.jpg"
-						alt="XPENG P7 Vinter"
-					/>
-				</div>
-				<div id="boat" class="tjeneste-innhold hidden">
-					<div>
-						<h3>Hydrolift E-22</h3>
-						<p>
-							Hydrolift E-22 er en elektrisk båt som er 6.68m lang og 2.3m bred. Med sin Evoy Breeze motor
-							pakke får den en minste kraft på 120 hestekrefter, som oftest vesentlig mer. Toppfarten på
-							40 knopp er heller ikke noe
-						</p>
-						<p>
-							Hvis du vil ha mer info om båten kan du følge denne linken til produsenten sin nettside
-							<a href="https://hydrolift.com/e-22/?lang=no">Hydrolift E22</a>
-						</p>
-					</div>
-					<img
-						src="https://ekergroup.com/content/uploads/sites/4/2021/04/Hydrolift_E22_web_1.jpg"
-						alt="Hydrolift E22"
-					/>
-					<!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
-				</div>
-				<div id="sykkel" class="tjeneste-innhold hidden">
-					<div>
-						<h3>Momas Jason 2022</h3>
-						<p>
-							Momas Jason 2022 modell er norges mest solgte elsykkel, med god grunn. Dette er en elektrisk
-							terrengsykkel som er designet for bruk på vei, terreng og sti. Den har hydrauliske
-							skivebremser og opptil 100km rekkevidde.
-						</p>
-						<p>
-							Hvis du vil ha mer info om sykkelen, følg denne linken til produsentens nettside
-							<a href="https://www.momas.no/modeller/jason/">Momas Jason 2022</a>
-						</p>
-					</div>
-					<img src="https://www.momas.no/wp-content/uploads/2022/02/jason.png" alt="Momas Jason 2022" />
-					<!-- https://www.e-wheels.no/elsykkel/momas-jason/ -->
-				</div>
-				<script>
-					// Script for å automatisk vise riktig kjøretøy ved link navigering
-					let tjregex = /\.html\#(\w+)/; // match en #text ref i url
-					let tjreglist = document.URL.match(tjregex);
-					if (tjreglist != null) {
-						//console.log(tjreglist[1]);
-						let tjdivs = document.getElementsByClassName("tjeneste-innhold hidden");
-						//console.log(tjdivs);
-						for (const x of tjdivs) {
-							//console.log(x.id);
-							let z = x.id.trim();
-							if (z == tjreglist[1]) {
-								// tjreglist[1] blir text bak # i tittel
-								//console.log("ding ding ding");
-								// console.log(x.className);
-								let strings = x.className.split(" ");
-								let outstr = "";
-								for (const str of strings) {
-									if (str !== "hidden") {
-										outstr += str;
-									}
-								}
-								x.className = outstr;
-							}
-						}
-					} else {
-						let e = document.getElementById("bil");
-						let strings = e.className.split(" ");
-						let outstr = "";
-						for (const str of strings) {
-							if (str !== "hidden") {
-								outstr += str;
-							}
-						}
-						e.className = outstr;
-					}
-				</script>
-			</section>
-		</div>
-		<div id="page-footer">
-			<!-- page footer, rediger footer.js for å legge inn html kode her -->
-			<script defer src="./footer.js"></script>
-			<footer id="app-footer"></footer>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>EDEL - Kjøretøy</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+<div id="page-header">
+    <!-- bruker en js script fil til å laste inn header og footer
+        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
+    <!-- page header, rediger header.js for å legge inn html kode her -->
+    <!--<script defer src="./header.js"></script>-->
+    <header id="app-header">
+        <div id="banner">
+            <h1>EDEL</h1>
+            <p>For deling av elektriske kjøretøy</p>
+        </div>
+    </header>
+</div>
+<div id="page-navBar">
+    <!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
+    <!--<script defer src="./nav-bar.js"></script>-->
+    <nav id="nav-bar">
+        <ul class="nav-list">
+            <li><a href="./index.html">Forside</a></li>
+            <li class="nav-active"><a href="./tjenester.html">Ulike kjøretøy</a></li>
+            <li><a href="./medlemskap.html">Medlemskap</a></li>
+            <li><a href="./steder.html">Våre lokasjoner</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="page-content-wrapper">
+    <section class="page-content text-rute">
+        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
+        <h2 class="page-title">Kjøretøy</h2>
+        <div class="text-content">
+            <p>
+                Her hos EDEL tilbyr vi forskjellige typer kjøretøy for å dekke dine behov. <br/>
+                Vi har elsykler, elbiler og elbåter. <br/>
+                Sjekk ut displayboksen ved siden av for å lese mer om dem som funksjoner og utstyr de har.
+            </p>
+        </div>
+    </section>
+    <section class="page-content visningsrute">
+        <h3>Våre kjøretøy</h3>
+        <ul class="tjeneste-liste">
+            <li>
+                <a href="#bil" onclick="tjeneste_onclick('bil');">
+                    <h4>XPENG P7</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#boat" onclick="tjeneste_onclick('boat');">
+                    <h4>Hydrolift E-22</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#sykkel" onclick="tjeneste_onclick('sykkel');">
+                    <h4>Momas Jason 2022</h4>
+                </a>
+            </li>
+        </ul>
+        <div id="bil" class="tjeneste-innhold hidden">
+            <div>
+                <h3>XPENG P7</h3>
+                <p>
+                    Bilen XPENG P7 er en elektrisk bil i toppklasse. Med en rekekvidde på 706 kilometer og en
+                    akselerasjon fra 0-100 km/h på 4.5 sekunder kommer du ikke til å bli skuffet.
+                </p>
+                <p>
+                    Hvis du vil lese mer om bilen, kan du følge denne linken til produsenten
+                    <a href="https://heyxpeng.com/p7?prentId=1">XPENG P7</a>
+                </p>
+            </div>
+            <img
+                    src="https://xp-ams.s3.eu-central-1.amazonaws.com/www/public/static/img/p7-p4-1@2x.e28de669.jpg"
+                    alt="XPENG P7 Vinter"
+            />
+        </div>
+        <div id="boat" class="tjeneste-innhold hidden">
+            <div>
+                <h3>Hydrolift E-22</h3>
+                <p>
+                    Hydrolift E-22 er en elektrisk båt som er 6.68m lang og 2.3m bred. Med sin Evoy Breeze motor
+                    pakke får den en minste kraft på 120 hestekrefter, som oftest vesentlig mer. Toppfarten på
+                    40 knopp er heller ikke noe
+                </p>
+                <p>
+                    Hvis du vil ha mer info om båten kan du følge denne linken til produsenten sin nettside
+                    <a href="https://hydrolift.com/e-22/?lang=no">Hydrolift E22</a>
+                </p>
+            </div>
+            <img
+                    src="https://ekergroup.com/content/uploads/sites/4/2021/04/Hydrolift_E22_web_1.jpg"
+                    alt="Hydrolift E22"
+            />
+            <!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
+        </div>
+        <div id="sykkel" class="tjeneste-innhold hidden">
+            <div>
+                <h3>Momas Jason 2022</h3>
+                <p>
+                    Momas Jason 2022 modell er norges mest solgte elsykkel, med god grunn. Dette er en elektrisk
+                    terrengsykkel som er designet for bruk på vei, terreng og sti. Den har hydrauliske
+                    skivebremser og opptil 100km rekkevidde.
+                </p>
+                <p>
+                    Hvis du vil ha mer info om sykkelen, følg denne linken til produsentens nettside
+                    <a href="https://www.momas.no/modeller/jason/">Momas Jason 2022</a>
+                </p>
+            </div>
+            <img src="https://www.momas.no/wp-content/uploads/2022/02/jason.png" alt="Momas Jason 2022"/>
+            <!-- https://www.e-wheels.no/elsykkel/momas-jason/ -->
+        </div>
+        <script>
+            // Script for å automatisk vise riktig kjøretøy ved link navigering
+            let tjregex = /\.html\#(\w+)/; // match en #text ref i url
+            let tjreglist = document.URL.match(tjregex);
+            if (tjreglist != null) {
+                //console.log(tjreglist[1]);
+                let tjdivs = document.getElementsByClassName("tjeneste-innhold hidden");
+                //console.log(tjdivs);
+                for (const x of tjdivs) {
+                    //console.log(x.id);
+                    let z = x.id.trim();
+                    if (z == tjreglist[1]) {
+                        // tjreglist[1] blir text bak # i tittel
+                        //console.log("ding ding ding");
+                        // console.log(x.className);
+                        let strings = x.className.split(" ");
+                        let outstr = "";
+                        for (const str of strings) {
+                            if (str !== "hidden") {
+                                outstr += str;
+                            }
+                        }
+                        x.className = outstr;
+                    }
+                }
+            } else {
+                let e = document.getElementById("bil");
+                let strings = e.className.split(" ");
+                let outstr = "";
+                for (const str of strings) {
+                    if (str !== "hidden") {
+                        outstr += str;
+                    }
+                }
+                e.className = outstr;
+            }
+        </script>
+    </section>
+</div>
+<div id="page-footer">
+    <!-- page footer, rediger footer.js for å legge inn html kode her -->
+    <!--<script defer src="./footer.js"></script>-->
+    <footer id="app-footer">
+        <div id="footer">
+            <h4>Laget av</h4>
+            <p>Bjørnar, Storm, Halvor, Tarek</p>
+        </div>
+    </footer>
+</div>
+</body>
 </html>

@@ -1,239 +1,260 @@
 /*	sett font og bakgrunnsfarge til nettsiden */
 body {
-	background-color: rgb(145, 145, 145);
-	font-family: "Noto Sans", sans-serif;
-	margin: 1em;
-	padding: 0;
+    background-color: rgb(145, 145, 145);
+    font-family: "Noto Sans", sans-serif;
+    margin: 1em;
+    padding: 0;
 }
 
 /*	wrapper for ALT content i body som ikke
 	kommer fra script import */
 #page-content-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: start;
-	align-items: stretch;
-	flex: 1 1 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+    flex: 1 1 100px;
 }
 
 /*	standard class for alle hoved containere */
 .page-content {
-	margin: 0em;
-	padding: 1em;
+    margin: 0;
+    padding: 1em;
 }
 
 /*	text container start */
 .text-rute {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 0;
-	flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-wrap: wrap;
 }
-/*	spesiell formatering for 
+
+/*	spesiell formatering for
 	hovedtittel i text container */
 .page-title {
-	padding-top: 0;
-	margin: 0;
-	text-align: center;
+    padding-top: 0;
+    margin: 0;
+    text-align: center;
 }
+
 /* undertittel i text container */
 .text-title {
 }
+
 .steder-ting {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .steder-ting > div > div > img {
-	max-width: 600px;
+    max-width: 600px;
 }
 
 #venstre {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #høyre {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
+.text-content {
+    white-space: pre-line;
+    text-wrap: normal;
+}
+
 .text-content > div > img {
-	max-width: 600px;
+    max-width: 600px;
 }
+
 /*	text container stopp */
 
 /*	visninsrute container start */
 .visningsrute {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 2;
 
-	background-color: rgb(41, 90, 74);
-	border: 3px solid black;
-	padding: 0.3em;
+    background-color: rgb(41, 90, 74);
+    border: 3px solid black;
+    padding: 0.3em;
 }
+
 /*	visningsrute tittel */
 .visningsrute > h3 {
-	flex-grow: 1;
+    flex-grow: 0;
 
-	margin: 0;
-	margin-bottom: 0.1em;
+    margin: 0 0 0.1em;
 
-	line-height: 2em;
-	text-align: center;
+    line-height: 2em;
+    text-align: center;
 
-	background-color: rgb(128, 229, 179);
-	border: 2px solid black;
+    background-color: rgb(128, 229, 179);
+    border: 2px solid black;
 }
+
 /*	visninsrute container slutt */
 
 /*	medlemskap tabell start */
 .medlemskap-tabell {
-	border-top: none;
-	border-collapse: collapse;
+    border-top: none;
+    border-collapse: collapse;
 }
+
 .medlemskap-tabell #tblpris,
 .medlemskap-tabell #tbltjenester {
-	padding-left: 1em;
-	text-align: left;
+    padding-left: 1em;
+    text-align: left;
 }
+
 .medlemskap-tabell td,
 .medlemskap-tabell th {
-	border: 2px solid black;
+    border: 2px solid black;
 }
+
 .medlemskap-tabell th {
-	background-color: #333;
-	color: white;
-	text-decoration: none;
-	font-weight: normal;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
 }
+
 .medlemskap-tabell td {
-	text-align: center;
+    text-align: center;
 }
+
 .tblchkmark {
-	background-color: #222;
-	color: yellow;
-	min-width: 2em;
-	display: inline-block;
+    background-color: #222;
+    color: yellow;
+    min-width: 2em;
+    display: inline-block;
 }
+
 /*	medlemskap tabell slutt */
 
 /*	liste i tjenester.html start */
 .tjeneste-liste {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: row;
-	list-style-type: none;
-	border: 2px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    border: 2px solid black;
 }
 
 .tjeneste-liste > li {
-	flex-grow: 1;
-	background-color: #444;
-	outline: 1px solid black;
+    flex-grow: 1;
+    background-color: #444;
+    outline: 1px solid black;
 }
+
 .tjeneste-liste > li > a {
-	color: #008000;
-	text-decoration: none;
+    color: #008000;
+    text-decoration: none;
 }
+
 .tjeneste-liste > li:hover {
-	background-color: #222;
+    background-color: #222;
 }
 
 .tjeneste-liste > li > a > h4 {
-	background-color: inherit;
-	text-align: center;
-	padding: 1em;
-	margin: 0;
+    background-color: inherit;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
 }
 
 .tjeneste-innhold {
-	display: flex;
-	flex-direction: column;
-	max-width: 50vw;
-	margin: 1em;
-	margin-top: 0.2em;
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    margin: 0.2em 1em 1em;
 }
+
 .tjeneste-innhold > div > img {
-	width: 300px;
-	height: 300px;
+    width: 300px;
+    height: 300px;
 }
+
 /*	liste i tjenester.html slutt */
 
 .hidden {
-	display: none !important;
-	visibility: hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }
 
 /*	Header start */
 #banner {
-	border: 0.5em solid #008000;
-	text-align: center;
+    border: 0.5em solid #008000;
+    text-align: center;
 }
+
 #banner > h1 {
-	font-size: 6em;
-	padding: 0;
-	margin: 0;
+    font-size: 6em;
+    padding: 0;
+    margin: 0;
 }
 
 #banner > p {
-	padding: 0;
-	margin: 0;
-	padding-bottom: 1em;
+    margin: 0;
+    padding: 0 0 1em;
 }
+
 /*	Header slutt */
 
 /*	Footer start */
 #page-footer {
 }
+
 /*	Footer slutt */
 
 /*	Navbar css start */
 #nav-bar {
-	width: 100%;
-	margin: 0;
-	padding: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list {
-	list-style-type: none;
-	overflow: hidden;
+    list-style-type: none;
+    overflow: hidden;
 
-	background-color: #333;
+    background-color: #333;
 
-	top: 0;
-	padding: 0;
+    top: 0;
+    padding: 0;
 
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: row;
-	justify-content: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: flex-start;
 }
-/*	navliste element */
-.nav-list > li {
-	background-color: inherit;
-}
+
 /*	link i navliste */
 .nav-list > li > a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 1em 1.2em;
-	text-decoration: none;
-	background-color: inherit;
-	border: 0.3em solid #333;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em 1.2em;
+    text-decoration: none;
+    background-color: inherit;
+    border: 0.3em solid #333;
 }
 
 /*	Gjør link svart når du holder over*/
 .nav-list > li > a:hover {
-	background-color: #222;
-	border: 0.3em solid #008000;
+    background-color: #222;
+    border: 0.3em solid #008000;
 }
+
 /*	forsøke å lage en grønn farge på den siden en er på */
-.nav-list > li > .active {
-	background-color: #008000;
+.nav-active {
+    background-color: #008000;
 }
+
 /*	Navbar css slutt */

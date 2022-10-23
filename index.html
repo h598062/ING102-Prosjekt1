@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>EDEL</title>
-		<link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet" />
-		<script type="text/javascript" src="./main.js"></script>
-	</head>
-	<body>
-		<div id="page-header">
-			<!-- bruker en js script fil til å laste inn header og footer 
-				slik at vi slipper å ender alle filer hver gang vi fikser på de -->
-			<!-- page header, rediger header.js for å legge inn html kode her -->
-			<script defer src="./header.js"></script>
-			<header id="app-header"></header>
-		</div>
-		<div id="page-navBar">
-			<!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
-			<script defer src="./nav-bar.js"></script>
-			<nav id="nav-bar"></nav>
-		</div>
-		<div id="page-content-wrapper">
-			<section class="page-content">
-				<!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
-				<div>
-					<h3>Om oss</h3>
-					<p>
-						Det har aldri vært enklere å leie kjøretøy. Med Edel kan du lage bruker og hente kjøretøyet på
-						under 5 minutter. Med fullt fokus på miljø og teknologi tilbyr vi bare elektriske
-						fremkomstmiddel. Hos oss kan du leie elektriske biler, båter og sykkler. Alle kjøretøy kommer
-						fulladet som betyr at du sparer penger og tid. Du finner oss i både Bergen og Oslo. Så gjør ein
-						forskjell og velg Edel.
-					</p>
-				</div>
-			</section>
-		</div>
-		<div id="page-footer">
-			<!-- page footer, rediger footer.js for å legge inn html kode her -->
-			<script defer src="./footer.js"></script>
-			<footer id="app-footer"></footer>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>EDEL</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+<div id="page-header">
+    <!-- bruker en js script fil til å laste inn header og footer
+        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
+    <!-- page header, rediger header.js for å legge inn html kode her -->
+    <!--<script defer src="./header.js"></script>-->
+    <header id="app-header">
+        <div id="banner">
+            <h1>EDEL</h1>
+            <p>For deling av elektriske kjøretøy</p>
+        </div>
+    </header>
+</div>
+<div id="page-navBar">
+    <!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
+    <!--<script defer src="./nav-bar.js"></script>-->
+    <nav id="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-active"><a href="./index.html">Forside</a></li>
+            <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
+            <li><a href="./medlemskap.html">Medlemskap</a></li>
+            <li><a href="./steder.html">Våre lokasjoner</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="page-content-wrapper">
+    <section class="page-content">
+        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
+        <div>
+            <h3>Om oss</h3>
+            <p>
+                Det har aldri vært enklere å leie kjøretøy. Med Edel kan du lage bruker og hente kjøretøyet på
+                under 5 minutter. Med fullt fokus på miljø og teknologi tilbyr vi bare elektriske
+                fremkomstmiddel. Hos oss kan du leie elektriske biler, båter og sykkler. Alle kjøretøy kommer
+                fulladet som betyr at du sparer penger og tid. Du finner oss i både Bergen og Oslo. Så gjør ein
+                forskjell og velg Edel.
+            </p>
+        </div>
+    </section>
+</div>
+<div id="page-footer">
+    <!-- page footer, rediger footer.js for å legge inn html kode her -->
+    <!--<script defer src="./footer.js"></script>-->
+    <footer id="app-footer">
+        <div id="footer">
+            <h4>Laget av</h4>
+            <p>Bjørnar, Storm, Halvor, Tarek</p>
+        </div>
+    </footer>
+</div>
+</body>
 </html>

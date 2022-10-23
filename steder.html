@@ -1,156 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>EDEL - Steder</title>
-		<link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet" />
-		<script type="text/javascript" src="./main.js"></script>
-	</head>
-	<body>
-		<div id="page-header">
-			<!-- bruker en js script fil til å laste inn header og footer 
-				slik at vi slipper å ender alle filer hver gang vi fikser på de -->
-			<!-- page header, rediger header.js for å legge inn html kode her -->
-			<script defer src="./header.js"></script>
-			<header id="app-header"></header>
-		</div>
-		<div id="page-navBar">
-			<!-- page footer, rediger footer.js for å legge inn html kode her -->
-			<script defer src="./nav-bar.js"></script>
-			<nav id="nav-bar"></nav>
-		</div>
-		<div id="page-content-wrapper">
-			<section class="page-content">
-				<!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
-				<h2 class="page-title">Lokasjoner</h2>
-				<div class="steder-ting">
-					<div id="venstre">
-						<p><strong>Adresse: </strong>Kirsten Flagstads Plass 1, 0150 Oslo</p>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.5187098752726!2d10.749931055643609!3d59.90633943294915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e8ba321f715%3A0x1cb6a7c6a2a2d611!2sOperahuset%20Oslo!5e0!3m2!1sno!2sno!4v1663587785752!5m2!1sno!2sno"
-							width="600"
-							height="450"
-							style="border: 0"
-							allowfullscreen=""
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-							title="Google Maps"
-						></iframe>
-						<div>
-							<img
-								src="https://premium.vgc.no/v2/images/57622dcf-a3dc-4ded-ac64-52de667bb432?fit=crop&format=auto&h=675&w=1200&s=c03c3e638e64cb68ed161ffb39a9918a1eaaa44c"
-								alt=""
-							/>
-						</div>
-						<br />
-						<p>
-							På vårt utlånsted i Oslo leier vi ut 4 biler (XPENG P7), 1 båt (Hydrolift E-22), og 10
-							sykler (MOMAS Jason e sykler) våre kunder. For mer info angående våre tjenester, sjekk ut
-							<a href="tjenester.html"> her. </a>
-						</p>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>EDEL - Steder</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+<div id="page-header">
+    <!-- bruker en js script fil til å laste inn header og footer
+        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
+    <!-- page header, rediger header.js for å legge inn html kode her -->
+    <!--<script defer src="./header.js"></script>-->
+    <header id="app-header">
+        <div id="banner">
+            <h1>EDEL</h1>
+            <p>For deling av elektriske kjøretøy</p>
+        </div>
+    </header>
+</div>
+<div id="page-navBar">
+    <!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
+    <!--<script defer src="./nav-bar.js"></script>-->
+    <nav id="nav-bar">
+        <ul class="nav-list">
+            <li><a href="./index.html">Forside</a></li>
+            <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
+            <li><a href="./medlemskap.html">Medlemskap</a></li>
+            <li class="nav-active"><a href="./steder.html">Våre lokasjoner</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="page-content-wrapper">
+    <section class="page-content">
+        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
+        <h2 class="page-title">Lokasjoner</h2>
+        <div class="steder-ting">
+            <div id="venstre">
+                <p><strong>Adresse: </strong>Kirsten Flagstads Plass 1, 0150 Oslo</p>
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3364.5187098752726!2d10.749931055643609!3d59.90633943294915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46416e8ba321f715%3A0x1cb6a7c6a2a2d611!2sOperahuset%20Oslo!5e0!3m2!1sno!2sno!4v1663587785752!5m2!1sno!2sno"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Google Maps"
+                ></iframe>
+                <div>
+                    <img
+                            src="https://premium.vgc.no/v2/images/57622dcf-a3dc-4ded-ac64-52de667bb432?fit=crop&format=auto&h=675&w=1200&s=c03c3e638e64cb68ed161ffb39a9918a1eaaa44c"
+                            alt=""
+                    />
+                </div>
+                <br/>
+                <p>
+                    På vårt utlånsted i Oslo leier vi ut 4 biler (XPENG P7), 1 båt (Hydrolift E-22), og 10
+                    sykler (MOMAS Jason e sykler) våre kunder. For mer info angående våre tjenester, sjekk ut
+                    <a href="tjenester.html"> her. </a>
+                </p>
 
-						<h3>Andre tjenester og fasiliteter i nærheten</h3>
-						<ul>
-							<li>
-								Gangavstand til
-								<a
-									href="https://www.google.com/maps/dir/Oslo+Sentralstasjon,+Jernbanetorget+1,+0154+Oslo/Operahuset+Oslo,+Operahuset+i+Oslo,+Kirsten+Flagstads+Plass,+Oslo/@59.9092949,10.750853,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46416e8a1c253d39:0x6d69efbe96e850d2!2m2!1d10.7524574!2d59.911096!1m5!1m1!1s0x46416e8ba321f715:0x1cb6a7c6a2a2d611!2m2!1d10.7532798!2d59.9074576!3e2"
-									target="”_blank”"
-									>Oslo S</a
-								>
-							</li>
-							<li>
-								Gode muligheter for kollektiv transport
-								<ul>
-									<li>Bussrute: 300, 32, 505 og 81</li>
-									<li>Jernbane rute nr: L1, L12, L2 og L21</li>
-									<li>Undergrund rute nr: 1, 2 og 5</li>
-									<li>Bybane rute nr: 12</li>
-								</ul>
-							</li>
+                <h3>Andre tjenester og fasiliteter i nærheten</h3>
+                <ul>
+                    <li>
+                        Gangavstand til
+                        <a
+                                href="https://www.google.com/maps/dir/Oslo+Sentralstasjon,+Jernbanetorget+1,+0154+Oslo/Operahuset+Oslo,+Operahuset+i+Oslo,+Kirsten+Flagstads+Plass,+Oslo/@59.9092949,10.750853,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46416e8a1c253d39:0x6d69efbe96e850d2!2m2!1d10.7524574!2d59.911096!1m5!1m1!1s0x46416e8ba321f715:0x1cb6a7c6a2a2d611!2m2!1d10.7532798!2d59.9074576!3e2"
+                                target="”_blank”"
+                        >Oslo S</a
+                        >
+                    </li>
+                    <li>
+                        Gode muligheter for kollektiv transport
+                        <ul>
+                            <li>Bussrute: 300, 32, 505 og 81</li>
+                            <li>Jernbane rute nr: L1, L12, L2 og L21</li>
+                            <li>Undergrund rute nr: 1, 2 og 5</li>
+                            <li>Bybane rute nr: 12</li>
+                        </ul>
+                    </li>
 
-							<li>
-								Parkeringshus med lademuligheter for bil 150m unna
-								<ul>
-									<li>
-										<a
-											href="https://www.google.com/maps/place/Oslo+S+P-hus+ONEPARK/@59.9093374,10.752948,17.5z/data=!4m5!3m4!1s0x46416e8a53e26ad1:0xe9d842013e635970!8m2!3d59.909278!4d10.7541646"
-											target="”_blank”"
-											>Oslo S P-hus ONEPARK, Jernbanetorget 1, 0154 Oslo</a
-										>
-									</li>
-								</ul>
-							</li>
+                    <li>
+                        Parkeringshus med lademuligheter for bil 150m unna
+                        <ul>
+                            <li>
+                                <a
+                                        href="https://www.google.com/maps/place/Oslo+S+P-hus+ONEPARK/@59.9093374,10.752948,17.5z/data=!4m5!3m4!1s0x46416e8a53e26ad1:0xe9d842013e635970!8m2!3d59.909278!4d10.7541646"
+                                        target="”_blank”"
+                                >Oslo S P-hus ONEPARK, Jernbanetorget 1, 0154 Oslo</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
 
-							<li>Gangavstand til flere forskjellige butikker / kiosker og toalett</li>
-						</ul>
-					</div>
+                    <li>Gangavstand til flere forskjellige butikker / kiosker og toalett</li>
+                </ul>
+            </div>
 
-					<div id="høyre">
-						<p><strong>Adresse: </strong> Thormøhlens Gate 53, 5008 Bergen</p>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7887.449401314503!2d5.321267107772893!3d60.38143371894602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463cf95346ffed63%3A0x7b6eda482246de66!2sMarineholmen%20Forskningspark%20AS!5e0!3m2!1sno!2sno!4v1663588077512!5m2!1sno!2sno"
-							width="600"
-							height="450"
-							style="border: 0"
-							allowfullscreen=""
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-							title="Google Maps"
-						></iframe>
-						<div>
-							<img
-								src="https://upload.wikimedia.org/wikipedia/commons/2/23/Marineholmen_DSC_0681.jpg"
-								alt=""
-							/>
-						</div>
-						<br />
-						<p>
-							På vårt utlånsted i Bergen leier vi ut 4 biler (XPENG P7), 1 båt (Hydrolift E-22), og 10
-							sykler (MOMAS Jason e sykler) våre kunder. For mer info angående våre tjenester, sjekk ut
-							<a href="tjenester.html"> her. </a>
-						</p>
-						<h3>Andre tjenester og fasiliteter i nærheten</h3>
-						<ul>
-							<li>
-								Gangavstand til
-								<a
-									href="https://www.google.com/maps/dir/Bergen+busstasjon,+Bergen/Marineholmen+Forskningspark+AS+Thorm%C3%B8hlens+Gate+53+5008+Bergen/@60.3814282,5.3299849,14z/data=!4m13!4m12!1m5!1m1!1s0x463cfeac35fdabf5:0x967251ff78b06e8!2m2!1d5.33386!2d60.38811!1m5!1m1!1s0x463cf95346ffed63:0x7b6eda482246de66!2m2!1d5.3299849!2d60.3814282"
-									target="”_blank”"
-									>Bergen busstasjon</a
-								>
-							</li>
-							<li>
-								Gode muligheter for kollektiv transport
-								<ul>
-									<li>Bussrute: 12, 13 og 21</li>
-									<li>Bybane rute nr: 1</li>
-									<li>Bergen Bysykkel</li>
-								</ul>
-							</li>
+            <div id="høyre">
+                <p><strong>Adresse: </strong> Thormøhlens Gate 53, 5008 Bergen</p>
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7887.449401314503!2d5.321267107772893!3d60.38143371894602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463cf95346ffed63%3A0x7b6eda482246de66!2sMarineholmen%20Forskningspark%20AS!5e0!3m2!1sno!2sno!4v1663588077512!5m2!1sno!2sno"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Google Maps"
+                ></iframe>
+                <div>
+                    <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/23/Marineholmen_DSC_0681.jpg"
+                            alt=""
+                    />
+                </div>
+                <br/>
+                <p>
+                    På vårt utlånsted i Bergen leier vi ut 4 biler (XPENG P7), 1 båt (Hydrolift E-22), og 10
+                    sykler (MOMAS Jason e sykler) våre kunder. For mer info angående våre tjenester, sjekk ut
+                    <a href="tjenester.html"> her. </a>
+                </p>
+                <h3>Andre tjenester og fasiliteter i nærheten</h3>
+                <ul>
+                    <li>
+                        Gangavstand til
+                        <a
+                                href="https://www.google.com/maps/dir/Bergen+busstasjon,+Bergen/Marineholmen+Forskningspark+AS+Thorm%C3%B8hlens+Gate+53+5008+Bergen/@60.3814282,5.3299849,14z/data=!4m13!4m12!1m5!1m1!1s0x463cfeac35fdabf5:0x967251ff78b06e8!2m2!1d5.33386!2d60.38811!1m5!1m1!1s0x463cf95346ffed63:0x7b6eda482246de66!2m2!1d5.3299849!2d60.3814282"
+                                target="”_blank”"
+                        >Bergen busstasjon</a
+                        >
+                    </li>
+                    <li>
+                        Gode muligheter for kollektiv transport
+                        <ul>
+                            <li>Bussrute: 12, 13 og 21</li>
+                            <li>Bybane rute nr: 1</li>
+                            <li>Bergen Bysykkel</li>
+                        </ul>
+                    </li>
 
-							<li>
-								<a
-									href="https://www.marineholmen.com/gc-rieber-pluss/parkering-marineholmen/parkering-besoekende-med-sesam-sesam/"
-									target="”_blank”"
-									>Marineholmen parkering med hjelp av Sesam Sesam app.</a
-								>
-							</li>
-							<li>Gangavstand til flere forskjellige butikker / kiosker og toalett</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-		</div>
-		<div id="page-footer">
-			<!-- page footer, rediger footer.js for å legge inn html kode her -->
-			<script defer src="./footer.js"></script>
-			<footer id="app-footer"></footer>
-		</div>
-	</body>
+                    <li>
+                        <a
+                                href="https://www.marineholmen.com/gc-rieber-pluss/parkering-marineholmen/parkering-besoekende-med-sesam-sesam/"
+                                target="”_blank”"
+                        >Marineholmen parkering med hjelp av Sesam Sesam app.</a
+                        >
+                    </li>
+                    <li>Gangavstand til flere forskjellige butikker / kiosker og toalett</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="page-footer">
+    <!-- page footer, rediger footer.js for å legge inn html kode her -->
+    <!--<script defer src="./footer.js"></script>-->
+    <footer id="app-footer">
+        <div id="footer">
+            <h4>Laget av</h4>
+            <p>Bjørnar, Storm, Halvor, Tarek</p>
+        </div>
+    </footer>
+</div>
+</body>
 </html>
