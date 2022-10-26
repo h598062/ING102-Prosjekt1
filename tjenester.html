@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="utf-8"/>
     <meta name="description" content=""/>
@@ -33,16 +33,19 @@
             <li class="nav-active"><a href="./tjenester.html">Ulike kjøretøy</a></li>
             <li><a href="./medlemskap.html">Medlemskap</a></li>
             <li><a href="./steder.html">Våre lokasjoner</a></li>
+            <li><a href="./om-oss.html">Om Oss</a></li>
+            <li id="nav-login"><a href="./login.html">Login</a></li>
+            <li id="nav-profil" class="hidden"><a href="./profil.html">Profil</a></li>
         </ul>
     </nav>
 </div>
 <div id="page-content-wrapper">
+    <section id="page-title">
+        <h2>Kjøretøy</h2>
+    </section>
     <section class="page-content text-rute">
-        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
-        <h2 class="page-title">Kjøretøy</h2>
         <div class="text-content">
-            <p>
-                Her hos EDEL tilbyr vi forskjellige typer kjøretøy for å dekke dine behov. <br/>
+            <p class="">Her hos EDEL tilbyr vi forskjellige typer kjøretøy for å dekke dine behov. <br/>
                 Vi har elsykler, elbiler og elbåter. <br/>
                 Sjekk ut displayboksen ved siden av for å lese mer om dem som funksjoner og utstyr de har.
             </p>
@@ -50,7 +53,7 @@
     </section>
     <section class="page-content visningsrute">
         <h3>Våre kjøretøy</h3>
-        <ul class="tjeneste-liste">
+        <ul class="visningsrute-valgmeny">
             <li>
                 <a href="#bil" onclick="tjeneste_onclick('bil');">
                     <h4>XPENG P7</h4>
@@ -67,7 +70,7 @@
                 </a>
             </li>
         </ul>
-        <div id="bil" class="tjeneste-innhold hidden">
+        <div id="bil" class="visningsrute-innhold hidden">
             <div>
                 <h3>XPENG P7</h3>
                 <p>
@@ -84,7 +87,7 @@
                     alt="XPENG P7 Vinter"
             />
         </div>
-        <div id="boat" class="tjeneste-innhold hidden">
+        <div id="boat" class="visningsrute-innhold hidden">
             <div>
                 <h3>Hydrolift E-22</h3>
                 <p>
@@ -103,7 +106,7 @@
             />
             <!-- motor til båten https://www.evoy.no/evoy-outboard-electric-boat-motor/ -->
         </div>
-        <div id="sykkel" class="tjeneste-innhold hidden">
+        <div id="sykkel" class="visningsrute-innhold hidden">
             <div>
                 <h3>Momas Jason 2022</h3>
                 <p>
@@ -125,7 +128,7 @@
             let tjreglist = document.URL.match(tjregex);
             if (tjreglist != null) {
                 //console.log(tjreglist[1]);
-                let tjdivs = document.getElementsByClassName("tjeneste-innhold hidden");
+                let tjdivs = document.getElementsByClassName("visningsrute-innhold hidden");
                 //console.log(tjdivs);
                 for (const x of tjdivs) {
                     //console.log(x.id);
@@ -159,12 +162,10 @@
     </section>
 </div>
 <div id="page-footer">
-    <!-- page footer, rediger footer.js for å legge inn html kode her -->
-    <!--<script defer src="./footer.js"></script>-->
     <footer id="app-footer">
         <div id="footer">
             <h4>Laget av</h4>
-            <p>Bjørnar, Storm, Halvor, Tarek</p>
+            <p>Bjørnar, Elisabeth, Halvor, Oda, Storm, Tarek, Tuva</p>
         </div>
     </footer>
 </div>

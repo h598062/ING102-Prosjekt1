@@ -4,71 +4,56 @@ body {
     font-family: "Noto Sans", sans-serif;
     margin: 1em;
     padding: 0;
+    /* Gjør at scrollbar kommer som overlay oppå siden
+    i chrome/webkit baserte nettlesere */
+    overflow: overlay;
+    scrollbar-gutter: auto;
 }
-
-/*	wrapper for ALT content i body som ikke
-	kommer fra script import */
+img {
+    max-width: 100%;
+}
+/* Wrapper for hele innhold delen av siden */
 #page-content-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: start;
-    align-items: stretch;
-    flex: 1 1 100px;
+    flex: auto;
+    justify-content: space-evenly;
+}
+
+/*	spesiell formatering for
+	hovedtittel */
+#page-title {
+    text-align: center;
+    flex-basis: 100%;
 }
 
 /*	standard class for alle hoved containere */
 .page-content {
-    margin: 0;
+    margin: 1em;
     padding: 1em;
+    flex: 1 1 480px;
+}
+
+.outline {
+    outline: 2px solid black;
 }
 
 /*	text container start */
 .text-rute {
     display: flex;
     flex-direction: column;
-    flex-grow: 0;
     flex-wrap: wrap;
-}
-
-/*	spesiell formatering for
-	hovedtittel i text container */
-.page-title {
-    padding-top: 0;
-    margin: 0;
-    text-align: center;
 }
 
 /* undertittel i text container */
 .text-title {
 }
 
-.steder-ting {
-    display: flex;
-    justify-content: space-between;
-}
-
-.steder-ting > div > div > img {
-    max-width: 600px;
-}
-
-#venstre {
-    display: flex;
-    flex-direction: column;
-}
-
-#høyre {
-    display: flex;
-    flex-direction: column;
-}
-
 .text-content {
+    line-height: 1.2em;
     white-space: pre-line;
     text-wrap: normal;
-}
-
-.text-content > div > img {
-    max-width: 600px;
 }
 
 /*	text container stopp */
@@ -82,7 +67,7 @@ body {
 
     background-color: rgb(41, 90, 74);
     border: 3px solid black;
-    padding: 0.3em;
+    padding: 1em;
 }
 
 /*	visningsrute tittel */
@@ -98,12 +83,22 @@ body {
     border: 2px solid black;
 }
 
+.visningsrute > iframe {
+    min-height: 40vh;
+}
+
+.visningsrute > img {
+    min-height: 30vh;
+    object-fit: cover;
+}
+
 /*	visninsrute container slutt */
 
 /*	medlemskap tabell start */
 .medlemskap-tabell {
     border-top: none;
     border-collapse: collapse;
+
 }
 
 .medlemskap-tabell #tblpris,
@@ -138,7 +133,7 @@ body {
 /*	medlemskap tabell slutt */
 
 /*	liste i tjenester.html start */
-.tjeneste-liste {
+.visningsrute-valgmeny {
     margin: 0;
     padding: 0;
     display: flex;
@@ -147,38 +142,38 @@ body {
     border: 2px solid black;
 }
 
-.tjeneste-liste > li {
+.visningsrute-valgmeny > li {
     flex-grow: 1;
     background-color: #444;
     outline: 1px solid black;
 }
 
-.tjeneste-liste > li > a {
+.visningsrute-valgmeny > li > a {
     color: #008000;
     text-decoration: none;
 }
 
-.tjeneste-liste > li:hover {
+.visningsrute-valgmeny > li:hover {
     background-color: #222;
 }
 
-.tjeneste-liste > li > a > h4 {
+.visningsrute-valgmeny > li > a > h4 {
     background-color: inherit;
     text-align: center;
     padding: 1em;
     margin: 0;
 }
 
-.tjeneste-innhold {
+.visningsrute-innhold {
     display: flex;
     flex-direction: column;
-    max-width: 50vw;
-    margin: 0.2em 1em 1em;
 }
 
-.tjeneste-innhold > div > img {
-    width: 300px;
-    height: 300px;
+.visningsrute-innhold > img {
+    background-color: rgb(145, 145, 145);
+    max-height: 40vh;
+    object-fit: scale-down;
+    width: fit-content;
 }
 
 /*	liste i tjenester.html slutt */
@@ -209,6 +204,7 @@ body {
 
 /*	Footer start */
 #page-footer {
+    text-align: center;
 }
 
 /*	Footer slutt */
@@ -218,11 +214,13 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: sticky;
 }
 
 .nav-list {
     list-style-type: none;
     overflow: hidden;
+    flex-wrap: wrap;
 
     background-color: #333;
 
@@ -232,7 +230,7 @@ body {
     display: flex;
     flex: 1 1 auto;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 /*	link i navliste */
@@ -257,4 +255,15 @@ body {
     background-color: #008000;
 }
 
-/*	Navbar css slutt */
+/* Gjør scrollbar fin i chrome/webkit baserte nettlesere */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: dimgray;
+}

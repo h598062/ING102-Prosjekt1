@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="utf-8"/>
     <meta name="description" content=""/>
@@ -13,10 +13,6 @@
 </head>
 <body>
 <div id="page-header">
-    <!-- bruker en js script fil til å laste inn header og footer
-        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
-    <!-- page header, rediger header.js for å legge inn html kode her -->
-    <!--<script defer src="./header.js"></script>-->
     <header id="app-header">
         <div id="banner">
             <h1>EDEL</h1>
@@ -25,29 +21,30 @@
     </header>
 </div>
 <div id="page-navBar">
-    <!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
-    <!--<script defer src="./nav-bar.js"></script>-->
     <nav id="nav-bar">
         <ul class="nav-list">
             <li><a href="./index.html">Forside</a></li>
             <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
-            <li class="nav-active"><a href="./medlemskap.html">Medlemskap</a></li>
-            <li><a href="./steder.html">Våre lokasjoner</a></li>
+            <li><a href="./medlemskap.html">Medlemskap</a></li>
+            <li class="nav-active"><a href="./steder.html">Våre lokasjoner</a></li>
+            <li><a href="./om-oss.html">Om Oss</a></li>
+            <li id="nav-login"><a href="./login.html">Login</a></li>
+            <li id="nav-profil" class="hidden"><a href="./profil.html">Profil</a></li>
         </ul>
     </nav>
 </div>
 <div id="page-content-wrapper">
+    <section id="page-title">
+        <h2>template</h2>
+    </section>
     <section class="page-content">
-        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
     </section>
 </div>
 <div id="page-footer">
-    <!-- page footer, rediger footer.js for å legge inn html kode her -->
-    <!--<script defer src="./footer.js"></script>-->
     <footer id="app-footer">
         <div id="footer">
             <h4>Laget av</h4>
-            <p>Bjørnar, Storm, Halvor, Tarek</p>
+            <p>Bjørnar, Elisabeth, Halvor, Oda, Storm, Tarek, Tuva</p>
         </div>
     </footer>
 </div>

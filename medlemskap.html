@@ -1,150 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="description" content=""/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>EDEL - Medlemskap</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
-    <script type="text/javascript" src="./main.js"></script>
+	<meta charset="utf-8"/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>EDEL - Medlemskap</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
+	<script type="text/javascript" src="./main.js"></script>
 </head>
 <body>
 <div id="page-header">
-    <!-- bruker en js script fil til å laste inn header og footer
-        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
-    <!-- page header, rediger header.js for å legge inn html kode her -->
-    <!--<script defer src="./header.js"></script>-->
-    <header id="app-header">
-        <div id="banner">
-            <h1>EDEL</h1>
-            <p>For deling av elektriske kjøretøy</p>
-        </div>
-    </header>
+	<!-- bruker en js script fil til å laste inn header og footer
+		slik at vi slipper å ender alle filer hver gang vi fikser på de -->
+	<!-- page header, rediger header.js for å legge inn html kode her -->
+	<!--<script defer src="./header.js"></script>-->
+	<header id="app-header">
+		<div id="banner">
+			<h1>EDEL</h1>
+			<p>For deling av elektriske kjøretøy</p>
+		</div>
+	</header>
 </div>
 <div id="page-navBar">
-    <!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
-    <!--<script defer src="./nav-bar.js"></script>-->
-    <nav id="nav-bar">
-        <ul class="nav-list">
-            <li><a href="./index.html">Forside</a></li>
-            <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
-            <li class="nav-active"><a href="./medlemskap.html">Medlemskap</a></li>
-            <li><a href="./steder.html">Våre lokasjoner</a></li>
-        </ul>
-    </nav>
+	<!-- page navbar, rediger nav-bar.js for å legge inn html kode her -->
+	<!--<script defer src="./nav-bar.js"></script>-->
+	<nav id="nav-bar">
+		<ul class="nav-list">
+			<li><a href="./index.html">Forside</a></li>
+			<li><a href="./tjenester.html">Ulike kjøretøy</a></li>
+			<li class="nav-active"><a href="./medlemskap.html">Medlemskap</a></li>
+			<li><a href="./steder.html">Våre lokasjoner</a></li>
+			<li><a href="./om-oss.html">Om Oss</a></li>
+			<li id="nav-login"><a href="./login.html">Login</a></li>
+			<li id="nav-profil" class="hidden"><a href="./profil.html">Profil</a></li>
+		</ul>
+	</nav>
 </div>
 <div id="page-content-wrapper">
-    <section class="page-content text-rute">
-        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
-        <h2 class="page-title">Medlemskap</h2>
-        <div class="text-content">
-            <h3 class="text-title">Hvilke medlemskap passer best for deg?</h3>
-            <p>
-                Her i EDEL har vi utrolig mye å by på. Vi kan love at vi finner et medlemskap som passer deg!
-                EDEL kan tilby deg tre forskjellige medlemskap, hvor du kan selv velge det medlemskapet som funker best
-                for deg.
-            </p>
-            <p>
-                <strong>Bil- og sykkeldeling medlemskapet</strong> vårt gir deg fri tilgang til alle biler og sykler fra
-                alle våre utlånsteder i hele Norge!
-                <strong>Båtdeling medlemskapet</strong> vårt gir deg fri tilgang til alle våre båter fra våre
-                utlånsteder i hele Norge!
-                <strong>Totalpakken</strong> vår er det medlemskapet du får mest for pengene. Ikke bare får du både
-                tilgang til alt av bil og sykkel,
-                men du får også tilgang til alt av båter hos alle våre utlånsteder i hele norge.
+	<section id="page-title"><h2>Medlemskap</h2></section>
+	<section class="page-content text-rute">
+		<!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
+		<div class="text-content"><h3 class="text-title">Hvilke medlemskap passer best for deg?</h3><p>Her i EDEL har vi utrolig mye å by på. Vi kan love at vi finner et medlemskap som passer deg!
+				EDEL kan tilby deg tre forskjellige medlemskap, hvor du kan selv velge det medlemskapet som funker best
+				for deg.</p>
+			<p><strong>Bil- og sykkeldeling medlemskapet</strong> vårt gir deg fri tilgang til alle biler og sykler fra
+				alle våre utlånsteder i hele Norge!
 
-            </p>
-        </div>
-    </section>
-    <section class="page-content visningsrute">
-        <h3>Våre medlemskap</h3>
-        <table class="medlemskap-tabell">
-            <caption></caption>
-            <thead>
-            <tr>
-                <th scope="col"></th>
-                <th id="medlm1" scope="col">Bildeling</th>
-                <th id="medlm2" scope="col">Båtdeling</th>
-                <th id="medlm3" scope="col">Totalpakke</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th id="tblpris" colspan="4" scope="colgroup">Pris</th>
-            </tr>
-            <tr>
-                <th headers="tblpris" id="tblmåned1">1 måned</th>
-                <td headers="tblpris tblmåned1 medlm1">1 000 kr</td>
-                <td headers="tblpris tblmåned1 medlm2">1 500 kr</td>
-                <td headers="tblpris tblmåned1 medlm3">2 000 kr</td>
-            </tr>
-            <tr>
-                <th headers="tblpris" id="tblmåned3">3 måneder</th>
-                <td headers="tblpris tblmåned3 medlm1">2 700 kr</td>
-                <td headers="tblpris tblmåned3 medlm2">3 900 kr</td>
-                <td headers="tblpris tblmåned3 medlm3">5 400 kr</td>
-            </tr>
-            <tr>
-                <th headers="tblpris" id="tblmåned12">12 måneder</th>
-                <td headers="tblpris tblmåned12 medlm1">10 000 kr</td>
-                <td headers="tblpris tblmåned12 medlm2">15 000 kr</td>
-                <td headers="tblpris tblmåned12 medlm3">20 000 kr</td>
-            </tr>
-            <tr>
-                <th id="tbltjenester" colspan="4" scope="colgroup">Tjenester</th>
-            </tr>
-            <tr>
-                <th headers="tbltjenester" id="tblbil">Bil</th>
-                <td headers="tbltjenester tblbil medlm1">
-                    <div class="tblchkmark">x</div>
-                </td>
-                <td headers="tbltjenester tblbil medlm2">
-                    <div class="tblchkmark"></div>
-                </td>
-                <td headers="tbltjenester tblbil medlm3">
-                    <div class="tblchkmark">x</div>
-                </td>
-            </tr>
-            <tr>
-                <th headers="tbltjenester" id="tblbåt">Båt</th>
-                <td headers="tbltjenester tblbåt medlm1">
-                    <div class="tblchkmark"></div>
-                </td>
-                <td headers="tbltjenester tblbåt medlm2">
-                    <div class="tblchkmark">x</div>
-                </td>
-                <td headers="tbltjenester tblbåt medlm3">
-                    <div class="tblchkmark">x</div>
-                </td>
-            </tr>
-            <tr>
-                <th headers="tbltjenester" id="tblsykkel">Sykkel</th>
-                <td headers="tbltjenester tblsykkel medlm1">
-                    <div class="tblchkmark">x</div>
-                </td>
-                <td headers="tbltjenester tblsykkel medlm2">
-                    <div class="tblchkmark"></div>
-                </td>
-                <td headers="tbltjenester tblsykkel medlm3">
-                    <div class="tblchkmark">x</div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
+				<strong>Båtdeling medlemskapet</strong> vårt gir deg fri tilgang til alle våre båter fra våre
+				utlånsteder i hele Norge!
+
+				<strong>Totalpakken</strong> vår er det medlemskapet du får mest for pengene. Ikke bare får du både
+				tilgang til alt av bil og sykkel,
+				men du får også tilgang til alt av båter hos alle våre utlånsteder i hele norge.</p></div>
+	</section>
+	<section class="page-content visningsrute">
+		<h3>Våre medlemskap</h3>
+		<table class="medlemskap-tabell">
+			<caption></caption>
+			<thead>
+			<tr>
+				<th scope="col"></th>
+				<th id="medlm1" scope="col">Bildeling</th>
+				<th id="medlm2" scope="col">Båtdeling</th>
+				<th id="medlm3" scope="col">Totalpakke</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<th id="tblpris" colspan="4" scope="colgroup">Pris</th>
+			</tr>
+			<tr>
+				<th headers="tblpris" id="tblmåned1">1 måned</th>
+				<td headers="tblpris tblmåned1 medlm1">1 000 kr</td>
+				<td headers="tblpris tblmåned1 medlm2">1 500 kr</td>
+				<td headers="tblpris tblmåned1 medlm3">2 000 kr</td>
+			</tr>
+			<tr>
+				<th headers="tblpris" id="tblmåned3">3 måneder</th>
+				<td headers="tblpris tblmåned3 medlm1">2 700 kr</td>
+				<td headers="tblpris tblmåned3 medlm2">3 900 kr</td>
+				<td headers="tblpris tblmåned3 medlm3">5 400 kr</td>
+			</tr>
+			<tr>
+				<th headers="tblpris" id="tblmåned12">12 måneder</th>
+				<td headers="tblpris tblmåned12 medlm1">10 000 kr</td>
+				<td headers="tblpris tblmåned12 medlm2">15 000 kr</td>
+				<td headers="tblpris tblmåned12 medlm3">20 000 kr</td>
+			</tr>
+			<tr>
+				<th id="tbltjenester" colspan="4" scope="colgroup">Tjenester</th>
+			</tr>
+			<tr>
+				<th headers="tbltjenester" id="tblbil">Bil</th>
+				<td headers="tbltjenester tblbil medlm1">
+					<div class="tblchkmark">x</div>
+				</td>
+				<td headers="tbltjenester tblbil medlm2">
+					<div class="tblchkmark"></div>
+				</td>
+				<td headers="tbltjenester tblbil medlm3">
+					<div class="tblchkmark">x</div>
+				</td>
+			</tr>
+			<tr>
+				<th headers="tbltjenester" id="tblbåt">Båt</th>
+				<td headers="tbltjenester tblbåt medlm1">
+					<div class="tblchkmark"></div>
+				</td>
+				<td headers="tbltjenester tblbåt medlm2">
+					<div class="tblchkmark">x</div>
+				</td>
+				<td headers="tbltjenester tblbåt medlm3">
+					<div class="tblchkmark">x</div>
+				</td>
+			</tr>
+			<tr>
+				<th headers="tbltjenester" id="tblsykkel">Sykkel</th>
+				<td headers="tbltjenester tblsykkel medlm1">
+					<div class="tblchkmark">x</div>
+				</td>
+				<td headers="tbltjenester tblsykkel medlm2">
+					<div class="tblchkmark"></div>
+				</td>
+				<td headers="tbltjenester tblsykkel medlm3">
+					<div class="tblchkmark">x</div>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</section>
 </div>
 <div id="page-footer">
-    <!-- page footer, rediger footer.js for å legge inn html kode her -->
-    <!--<script defer src="./footer.js"></script>-->
-    <footer id="app-footer">
-        <div id="footer">
-            <h4>Laget av</h4>
-            <p>Bjørnar, Storm, Halvor, Tarek</p>
-        </div>
-    </footer>
+	<footer id="app-footer">
+		<div id="footer">
+			<h4>Laget av</h4>
+			<p>Bjørnar, Elisabeth, Halvor, Oda, Storm, Tarek, Tuva</p>
+		</div>
+	</footer>
 </div>
 </body>
 </html>
