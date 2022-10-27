@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
-    <script type="text/javascript" src="tjenester.js"></script>
 </head>
 <body>
 <div id="page-header">
@@ -26,18 +25,37 @@
             <li><a href="./index.html">Forside</a></li>
             <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
             <li><a href="./medlemskap.html">Medlemskap</a></li>
-            <li class="nav-active"><a href="./steder.html">Våre lokasjoner</a></li>
+            <li><a href="./steder.html">Våre lokasjoner</a></li>
             <li><a href="./om-oss.html">Om Oss</a></li>
-            <li id="nav-login"><a href="./login.html">Login</a></li>
+            <li id="nav-login" class="nav-active"><a href="./login.html">Login</a></li>
             <li id="nav-profil" class="hidden"><a href="./profil.html">Profil</a></li>
         </ul>
     </nav>
 </div>
 <div id="page-content-wrapper">
     <section id="page-title">
-        <h2>template</h2>
+        <h2>Login</h2>
     </section>
-    <section class="page-content">
+    <section class="page-content visningsrute center">
+        <div class="center" id="nyBrukerTekst">
+            Har du ikke en bruker? <br>
+            <button id="newAccBtn">Lag ny bruker</button>
+        </div>
+        <form class="login" id="loginForm">
+            <label for="usernameLogin">Brukernavn</label>
+            <input type="text" id="usernameLogin" name="username">
+            <label for="passwordLogin">Passord</label>
+            <input type="password" id="passwordLogin" name="password">
+            <input type="submit" value="Login">
+        </form>
+        <form class="login hidden" id="nyBruker">
+            <label for="usernameNy">Brukernavn</label>
+            <input type="text" id="usernameNy" name="username">
+            <label for="passwordNy">Passord</label>
+            <input type="password" id="passwordNy" name="password">
+            <input type="submit" value="Lag Bruker">
+        </form>
+        <script type="text/javascript" src="login.js"></script>
     </section>
 </div>
 <div id="page-footer">

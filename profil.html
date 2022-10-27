@@ -4,12 +4,11 @@
     <meta charset="utf-8"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>EDEL</title>
+    <title>EDEL - Brukerprofil</title>
     <link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
-    <script type="text/javascript" src="tjenester.js"></script>
 </head>
 <body>
 <div id="page-header">
@@ -26,18 +25,25 @@
             <li><a href="./index.html">Forside</a></li>
             <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
             <li><a href="./medlemskap.html">Medlemskap</a></li>
-            <li class="nav-active"><a href="./steder.html">Våre lokasjoner</a></li>
+            <li><a href="./steder.html">Våre lokasjoner</a></li>
             <li><a href="./om-oss.html">Om Oss</a></li>
-            <li id="nav-login"><a href="./login.html">Login</a></li>
-            <li id="nav-profil" class="hidden"><a href="./profil.html">Profil</a></li>
+            <li id="nav-login" class="hidden"><a href="./login.html">Login</a></li>
+            <li id="nav-profil" class="nav-active"><a href="./profil.html">Profil</a></li>
         </ul>
     </nav>
 </div>
 <div id="page-content-wrapper">
     <section id="page-title">
-        <h2>template</h2>
+        <h2>Profil - </h2>
     </section>
-    <section class="page-content">
+    <section class="page-content visningsrute center">
+        <ul>
+            <li><h3 id="navn"></h3></li>
+            <li><h3 id="medlemskap"></h3></li>
+        </ul>
+        <form id="logut"><input type="submit" value="Log ut">
+        </form>
+        <script type="text/javascript" src="profil.js"></script>
     </section>
 </div>
 <div id="page-footer">

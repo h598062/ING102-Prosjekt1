@@ -4,15 +4,18 @@
     <meta charset="utf-8"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>EDEL</title>
+    <title>EDEL - Om Oss</title>
     <link rel="stylesheet" type="text/css" media="screen" href="./main.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
-    <script type="text/javascript" src="tjenester.js"></script>
 </head>
 <body>
 <div id="page-header">
+    <!-- bruker en js script fil til å laste inn header og footer
+        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
+    <!-- page header, rediger header.js for å legge inn html kode her -->
+    <!--<script defer src="./header.js"></script>-->
     <header id="app-header">
         <div id="banner">
             <h1>EDEL</h1>
@@ -26,18 +29,20 @@
             <li><a href="./index.html">Forside</a></li>
             <li><a href="./tjenester.html">Ulike kjøretøy</a></li>
             <li><a href="./medlemskap.html">Medlemskap</a></li>
-            <li class="nav-active"><a href="./steder.html">Våre lokasjoner</a></li>
-            <li><a href="./om-oss.html">Om Oss</a></li>
+            <li><a href="./steder.html">Våre lokasjoner</a></li>
+            <li class="nav-active"><a href="./om-oss.html">Om Oss</a></li>
             <li id="nav-login"><a href="./login.html">Login</a></li>
             <li id="nav-profil" class="hidden"><a href="./profil.html">Profil</a></li>
         </ul>
     </nav>
+    <script type="text/javascript" src="./sjekklogin.js"></script>
 </div>
 <div id="page-content-wrapper">
     <section id="page-title">
         <h2>template</h2>
     </section>
     <section class="page-content">
+        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
     </section>
 </div>
 <div id="page-footer">
