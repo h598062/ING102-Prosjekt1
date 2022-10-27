@@ -9,14 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet"/>
-    <script type="text/javascript" src="./main.js"></script>
 </head>
 <body>
 <div id="page-header">
-    <!-- bruker en js script fil til å laste inn header og footer
-        slik at vi slipper å ender alle filer hver gang vi fikser på de -->
-    <!-- page header, rediger header.js for å legge inn html kode her -->
-    <!--<script defer src="./header.js"></script>-->
     <header id="app-header">
         <div id="banner">
             <h1>EDEL</h1>
@@ -39,10 +34,16 @@
 </div>
 <div id="page-content-wrapper">
     <section id="page-title">
-        <h2>template</h2>
+        <h2>Profil - </h2>
     </section>
-    <section class="page-content">
-        <!-- Legg inn content her, eller i nye section tags inne i "page-content" div -->
+    <section class="page-content visningsrute center">
+        <ul>
+            <li><h3 id="navn"></h3></li>
+            <li><h3 id="medlemskap"></h3></li>
+        </ul>
+        <form id="logut"><input type="submit" value="Log ut">
+        </form>
+        <script type="text/javascript" src="profil.js"></script>
     </section>
 </div>
 <div id="page-footer">

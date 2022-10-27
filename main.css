@@ -33,6 +33,7 @@ img {
     margin: 1em;
     padding: 1em;
     flex: 1 1 480px;
+    max-width: 900px;
 }
 
 .outline {
@@ -62,8 +63,9 @@ img {
 .visningsrute {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     flex-grow: 2;
+
+    align-items: stretch;
 
     background-color: rgb(41, 90, 74);
     border: 3px solid black;
@@ -90,6 +92,27 @@ img {
 .visningsrute > img {
     min-height: 30vh;
     object-fit: cover;
+}
+
+.login {
+    display: inherit;
+    flex-direction: column;
+}
+#loginForm {
+    max-width: 20em;
+}
+
+#logut {
+    display: flex;
+    flex: 0 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.center {
+    align-items: center;
+    width: fit-content;
+    flex-grow: 0;
 }
 
 /*	visninsrute container slutt */
