@@ -7,7 +7,7 @@ body {
     /* Gjør at scrollbar kommer som overlay oppå siden
     i chrome/webkit baserte nettlesere */
     overflow: overlay;
-    scrollbar-gutter: auto;
+    scrollbar-gutter: stable both-edges;
 }
 img {
     max-width: 100%;
