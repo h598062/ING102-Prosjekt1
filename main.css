@@ -117,15 +117,15 @@ img {
 
 /*	visninsrute container slutt */
 
-.tjlnk,
-.tjlnk:visited,
-.tjlnk:link,
-.tjlnk:hover,
-.tjlnk:active {
+.lnkfix,
+.lnkfix:visited,
+.lnkfix:link,
+.lnkfix:hover,
+.lnkfix:active {
     color: inherit;
 }
 
-.tjlnk:hover {
+.lnkfix:hover {
     background: #333333;
     color: white;
 }
