@@ -74,7 +74,7 @@
                 </p>
                 <p>
                     Hvis du vil lese mer om bilen, kan du følge denne linken til produsenten
-                    <a href="https://heyxpeng.com/p7?prentId=1">XPENG P7</a>
+                    <a class="tjlnk" href="https://heyxpeng.com/p7">XPENG P7</a>
                 </p>
             </div>
             <img
@@ -91,7 +91,7 @@
                 </p>
                 <p>
                     Hvis du vil ha mer info om båten kan du følge denne linken til produsenten sin nettside
-                    <a href="https://hydrolift.com/e-22/?lang=no">Hydrolift E22</a>
+                    <a class="tjlnk" href="https://hydrolift.com/e-22/?lang=no">Hydrolift E22</a>
                 </p>
             </div>
             <img
@@ -110,7 +110,7 @@
                 </p>
                 <p>
                     Hvis du vil ha mer info om sykkelen, følg denne linken til produsentens nettside
-                    <a href="https://www.momas.no/modeller/jason/">Momas Jason 2022</a>
+                    <a class="tjlnk" href="https://www.momas.no/modeller/jason/">Momas Jason 2022</a>
                 </p>
             </div>
             <img src="https://www.momas.no/wp-content/uploads/2022/02/jason.png" alt="Momas Jason 2022"/>
@@ -118,7 +118,7 @@
         </div>
         <script>
             // Script for å automatisk vise riktig kjøretøy ved link navigering
-            let tjregex = /\.html\#(\w+)/; // match en #text ref i url
+            let tjregex = /\.html#(\w+)/; // match en #text ref i url
             let tjreglist = document.URL.match(tjregex);
             if (tjreglist != null) {
                 //console.log(tjreglist[1]);
@@ -127,7 +127,7 @@
                 for (const x of tjdivs) {
                     //console.log(x.id);
                     let z = x.id.trim();
-                    if (z == tjreglist[1]) {
+                    if (z === tjreglist[1]) {
                         // tjreglist[1] blir text bak # i tittel
                         //console.log("ding ding ding");
                         // console.log(x.className);
@@ -158,7 +158,7 @@
 <div id="page-footer">
     <footer id="app-footer">
         <div id="footer">
-            <h4>Laget av</h4>
+            <h3>Laget av</h3>
             <p>Bjørnar, Elisabeth, Halvor, Oda, Storm, Tarek, Tuva</p>
         </div>
     </footer>

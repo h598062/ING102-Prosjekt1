@@ -117,6 +117,19 @@ img {
 
 /*	visninsrute container slutt */
 
+.tjlnk,
+.tjlnk:visited,
+.tjlnk:link,
+.tjlnk:hover,
+.tjlnk:active {
+    color: inherit;
+}
+
+.tjlnk:hover {
+    background: #333333;
+    color: white;
+}
+
 /*	medlemskap tabell start */
 .medlemskap-tabell {
     border-top: none;
@@ -172,7 +185,7 @@ img {
 }
 
 .visningsrute-valgmeny > li > a {
-    color: #008000;
+    color: white;
     text-decoration: none;
 }
 
