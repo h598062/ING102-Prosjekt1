@@ -6,8 +6,8 @@ body {
     padding: 0;
     /* Gjør at scrollbar kommer som overlay oppå siden
     i chrome/webkit baserte nettlesere */
-    overflow: overlay;
-    scrollbar-gutter: stable both-edges;
+    /*overflow: overlay;
+    scrollbar-gutter: stable both-edges;*/
 }
 img {
     max-width: 100%;
@@ -54,7 +54,6 @@ img {
 .text-content {
     line-height: 1.2em;
     white-space: pre-line;
-    text-wrap: normal;
 }
 
 /*	text container stopp */
@@ -292,6 +291,7 @@ img {
 }
 
 /* Gjør scrollbar fin i chrome/webkit baserte nettlesere */
+/*
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -302,4 +302,4 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
     background: dimgray;
-}
+}*/
